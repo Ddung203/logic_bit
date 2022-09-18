@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Các phép toán logic và bit</title>
+        <link rel="stylesheet" href="./s2.css" />
+    </head>
+    <body>
+        <div class="main">
+            <h1>Các phép toán logic và bit</h1>
+            <div class="table">
+                <ul class="col1 col50">
+                    <li class="center">Logic</li>
+                    <li>T/F</li>
+                    <li>Phủ định ¬</li>
+                    <li>Tuyển v</li>
+                    <li>Hội ^</li>
+                    <li class="bb0">Tuyển loại ⊕</li>
+                </ul>
+                <ul class="col2 col50">
+                    <li class="center">Bit</li>
+                    <li>1/0</li>
+                    <li>NOT</li>
+                    <li>OR</li>
+                    <li>AND</li>
+                    <li class="bb0">XOR</li>
+                </ul>
+            </div>
+
+            <form id="form" class="input__container">
+                <label for="n1">Nhập vào bit thứ nhất</label>
+
+                <input type="text" id="n1" />
+
+                <label for="n2">Nhập vào bit thứ hai</label>
+
+                <input type="text" id="n2" />
+
+                <div class="btn">
+                    <button id="or" type="submit">Kết quả</button>
+                </div>
+                <div class="blockRs">
+                    <strong>OR (Tuyển): </strong>
+                    <span id="resultOr"></span>
+                    <br />
+                    <strong>AND (Hội): </strong>
+                    <span id="resultAnd"></span>
+                    <br />
+                    <strong>XOR (Tuyển loại): </strong>
+                    <span id="resultXor"></span>
+                    <br />
+                    <strong>(Kéo theo): </strong>
+                    <span id="keotheo"></span>
+                </div>
+            </form>
+
+            <div id="modal" class="container an">
+                <div class="cookiesContent" id="cookiesPopup">
+                    <button class="close">✖</button>
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png"
+                        alt="cookies-img"
+                    />
+                    <p>Ôi không! Thiếu hoặc sai dữ liệu đầu vào</p>
+                    <button id="accept" class="accept">Nhập lại!</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="copyright">
+                <div class="copyright-left">
+                    <i class="fa-regular fa-copyright"></i>
+                    <p>Copyright <strong>2022</strong>. All Rights Reserved</p>
+                </div>
+                <div class="copyright-right">
+                    <span>Designed by</span>
+                    <a target="_blank" href="https://github.com/ddung203"
+                        >Ddung203</a
+                    >
+                </div>
+            </div>
+        </div>
+        <script src="./app.js"></script>
+    </body>
+</html>
