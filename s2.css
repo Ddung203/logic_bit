@@ -49,6 +49,8 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: none;
+    border-right: none;
 }
 .table {
     width: 300px;

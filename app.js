@@ -4,7 +4,8 @@ let n1 = id("n1"), n2 = id("n2"), form = id("form"),
     resultOr = id("resultOr"),
     resultAnd = id("resultAnd"),
     resultXor = id("resultXor"),
-    keotheo = id("keotheo");
+    keotheo = id("keotheo"),
+    tuongduong = id("tuongduong");
 let modal = id("modal");
 let accept = id("accept");
 let close = document.querySelector(".close");
@@ -22,6 +23,7 @@ form.addEventListener('submit', (e) => {
     engineAnd(n1, n2, resultAnd);
     engineXor(n1, n2, resultXor);
     engineKeoTheo(n1, n2, keotheo);
+    engineTuongDuong(n1, n2, tuongduong)
 })
 
 let engineCheckInput = (n1, n2) => {
@@ -132,5 +134,30 @@ let engineKeoTheo = (n1, n2, keotheo) => {
         myArray3 = myArray3.toString();
         myArray3 = myArray3.replaceAll(',', '')
         keotheo.innerText = myArray3;
+    }
+};
+
+let engineTuongDuong = (n1, n2, tuongduong) => {
+    n1.value = n1.value.trim();
+    n2.value = n2.value.trim();
+
+    let num1 = n1.value, num2 = n2.value;
+    let myArray1 = num1.split("");
+    let myArray2 = num2.split("");
+    let myArray3 = [];
+    if (num1 === "" || num1 == null || num2 === "" || num2 == null || (myArray1.length != myArray2.length)) {
+
+    } else {
+        for (let i = 0; i < myArray1.length; i++) {
+            if (myArray1[i] == 1 == myArray2[i]) {
+                myArray3[i] = 0;
+            }
+            else {
+                myArray3[i] = 1;
+            }
+        }
+        myArray3 = myArray3.toString();
+        myArray3 = myArray3.replaceAll(',', '')
+        tuongduong.innerText = myArray3;
     }
 };
